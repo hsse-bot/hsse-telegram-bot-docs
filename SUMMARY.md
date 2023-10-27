@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Описание классов](README.md)
+* [TelegramInterectionsService](README.md)
