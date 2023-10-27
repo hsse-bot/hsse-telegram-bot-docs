@@ -1,14 +1,6 @@
 # TelegramInterectionsService
 
-##
 
-### Class User:
-
-* Type which stores user telegram id, user database id etc.
-
-### Class Form:
-
-* Type which stores form database id, form name et
 
 ## IUserManagingService
 
