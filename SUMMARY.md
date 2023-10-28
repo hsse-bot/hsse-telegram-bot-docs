@@ -1,3 +1,3 @@
 # Table of contents
 
-* [TelegramInterectionsService](README.md)
+* [UsersManagingService](README.md)
