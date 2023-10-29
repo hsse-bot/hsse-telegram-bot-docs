@@ -34,17 +34,17 @@ score:Mapped\[int] - рейтинг пользователя
 
 Класс, который задает таблицу `roles` в БД
 
-id:Mapped\[int] - ID роли
+`id:Mapped[int]` - ID роли
 
-role\_name:Mapped\[str] - имя роли
+`role_name:Mapped[str]` - имя роли
 
 ## StudentInfo
 
 Класс, который задает таблицу `students_additional_infos` в БД
 
-id:Mapped\[int] - ID информации
+`id:Mapped[int]` - ID информации
 
-room\_number:Mapped\[int] - номер комнаты
+`room_number:Mapped[int]` - номер комнаты
 
 ## UserData
 
@@ -54,106 +54,110 @@ room\_number:Mapped\[int] - номер комнаты
 Данный тип **никаким образом не связан** с БД
 {% endhint %}
 
-name:str - имя пользователя (макс. 32 символа)
+`name:str` - имя пользователя (макс. 32 символа)
 
-surname:str - фамилия пользователя (макс. 32 символа)
+`surname:str` - фамилия пользователя (макс. 32 символа)
 
-tg\_id:int - ID пользователя в ТГ
+`tg_id:int` - ID пользователя в ТГ
 
-role:RoleData - объект роли
+`role:RoleData` - объект роли
 
-student\_info:Optional\[StudentInfoData] - объект дополнительной информации о студенте (если пользователь таковым является)
+`student_info:Optional[StudentInfoData]` - объект дополнительной информации о студенте (если пользователь таковым является)
 
 ## StudentInfoData
 
-room\_number:int - номер комнаты
+`room_number:int` - номер комнаты
 
 ## RoleData
 
-id:int - ID роли
+`id:int` - ID роли
 
-name:str - Имя роли
+`name:str` - Имя роли
 
 ## UserDelta
 
-new\_name:str - новое имя
+`new_name:str` - новое имя
 
-new\_surname:str - новая фамилия
+`new_surname:str` - новая фамилия
 
-new\_role\_id:int - новый ID роли
+`new_role_id:int` - новый ID роли
 
-student\_info\_delta:StudentInfoDelta - изменение доп информации студента
+`student_info_delta:StudentInfoDelta` - изменение доп информации студента
 
-new\_score:int - новый счет пользователя
+`new_score:int` - новый счет пользователя
 
 ## StudentInfoDelta
 
-room\_number:int - номер комнаты
+`room_number:int` - номер комнаты
 
-is\_male:boolean - true, если мужчина
+`is_male:boolean` - true, если мужчина
 
 ## IUserRepository
 
 Интерфейс предоставляет возможность манипулировать данными, которые связаны с пользователями
 
-create\_user(user:UserData) - создает пользователя
+`create_user(user:UserData)` - создает пользователя
 
-get\_user(tg\_id:int):UserData - получает пользователя по ID тг. Возвращает объект UserData
+`get_user(tg_id:int):UserData` - получает пользователя по ID тг. Возвращает объект UserData
 
-update\_user(tg\_id:int, delta:UserDelta) - изменяет пользователя
+`get_all_users():UserData[]` - получает всех пользователей
 
-delete\_user(tg\_id:int) - удаляет пользователя
+`update_user(tg_id:int, delta:UserDelta)` - изменяет пользователя
+
+`delete_user(tg_id:int)` - удаляет пользователя
 
 ## MySqlUserRepository
 
 Имплементация IUserRepository, которая использует MySQL БД для работы с данными
 
-create\_user(user:UserData) - создает пользователя
+`create_user(user:UserData)` - создает пользователя
 
-get\_user(tg\_id:int):UserData - получает пользователя по ID тг. Возвращает объект UserData
+`get_user(tg_id:int):UserData` - получает пользователя по ID тг. Возвращает объект UserData
 
-update\_user(tg\_id:int, delta:UserDelta) - изменяет пользователя
+`get_all_users():UserData[]` - получает всех пользователей
 
-delete\_user(tg\_id:int) - удаляет пользователя
+`update_user(tg_id:int, delta:UserDelta)` - изменяет пользователя
+
+`delete_user(tg_id:int)` - удаляет пользователя
 
 ## RedisUserRepository
 
 Имплементация IUserRepository, которая использует Redis и оригинальную имплементацию IUserRepository для работы с данными
 
-create\_user(user:UserData) - создает пользователя
+`create_user(user:UserData)` - создает пользователя
 
-get\_user(tg\_id:int):UserData - получает пользователя по ID тг. Возвращает объект UserData
+`get_user(tg_id:int):UserData` - получает пользователя по ID тг. Возвращает объект UserData
 
-update\_user(tg\_id:int, delta:UserDelta) - изменяет пользователя
+`get_all_users():UserData[]` - получает всех пользователей
 
-delete\_user(tg\_id:int) - удаляет пользователя
+`update_user(tg_id:int, delta:UserDelta)` - изменяет пользователя
 
-get\_all\_users():UserData\[] - получает всех пользователей
+`delete_user(tg_id:int)` - удаляет пользователя
 
 ## IRolesRepository
 
 Интерфейс предоставляет возможность манипулировать данными, которые связаны с ролями
 
-create\_role(role\_name:str):RoleData - создает новую роль
+`create_role(role_name:str):RoleData` - создает новую роль
 
-delete\_role(role\_id:int) - удаляет роль
+`delete_role(role_id:int)` - удаляет роль
 
-get\_role(role\_id:int):RoleData - получает роль по ID
+`get_role(role_id:int):RoleData` - получает роль по ID
 
-get\_all\_roles():RoleData\[] - получает все роли
+`get_all_roles():RoleData[]` - получает все роли
 
 ## main.py (в схеме как Global)
 
-create\_user() - выполняет следующий API-запрос
+`create_user()` - выполняет следующий API-запрос
 
-get\_user() - выполняет следующий API-запрос
+`get_user()` - выполняет следующий API-запрос
 
-get\_all\_users() - выполняет следующий API-запрос
+`get_all_users()` - выполняет следующий API-запрос
 
-update\_user() - выполняет следующий API-запрос
+`update_user()` - выполняет следующий API-запрос
 
-delete\_user() - выполняет следующий API-запрос
+`delete_user()` - выполняет следующий API-запрос
 
-get\_role() - выполняет следующий API-запрос
+`get_role()` - выполняет следующий API-запрос
 
-get\_roles() - выполняет следующий API-запрос
+`get_roles()` - выполняет следующий API-запрос
