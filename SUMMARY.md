@@ -1,3 +1,4 @@
 # Table of contents
 
-* [UsersManagingService](README.md)
+* [UsersManagingService Classes](README.md)
+* [UsersManagingService API Reference](usersmanagingservice-api-reference.md)
