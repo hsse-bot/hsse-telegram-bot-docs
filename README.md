@@ -14,21 +14,21 @@
 
 Класс, который задает таблицу `users` в БД
 
-name:Mapped\[str] - имя пользователя (макс. 32 символа)
+`name:Mapped[str]` - имя пользователя (макс. 32 символа)
 
-surname:Mapped\[str] - фамилия пользователя (макс. 32 символа)
+`surname:Mapped[str]` - фамилия пользователя (макс. 32 символа)
 
-role\_id:Mapped\[int] - ID роли, которая есть у пользователя
+`role_id:Mapped[int]` - ID роли, которая есть у пользователя
 
-student\_info\_id:Mapped\[Optional\[int]] - ID записи дополнительной информации о пользователе
+`student_info_id:Mapped[Optional[int]]` - ID записи дополнительной информации о пользователе
 
-tg\_id:Mapped\[int] - ID пользователя в ТГ (primary key)
+`tg_id:Mapped[int]` - ID пользователя в ТГ (primary key)
 
-role:Mapped\[Role] - объект роли, полученный по role\_id
+`role:Mapped[Role]` - объект роли, полученный по role\_id
 
-student\_info:Mapped\[StudentInfo] - объект дополнительной информации о студенте (если пользователь таковым является), полученный по student\_info\_id
+`student_info:Mapped[StudentInfo]` - объект дополнительной информации о студенте (если пользователь таковым является), полученный по student\_info\_id
 
-score:Mapped\[int] - рейтинг пользователя
+`score:Mapped[int]` - рейтинг пользователя
 
 ## Role
 
