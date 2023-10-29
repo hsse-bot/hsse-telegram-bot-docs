@@ -28,6 +28,8 @@ role:Mapped\[Role] - объект роли, полученный по role\_id
 
 student\_info:Mapped\[StudentInfo] - объект дополнительной информации о студенте (если пользователь таковым является), полученный по student\_info\_id
 
+score:Mapped\[int] - рейтинг пользователя
+
 ## Role
 
 Класс, который задает таблицу `roles` в БД
@@ -81,6 +83,8 @@ new\_surname:str - новая фамилия
 new\_role\_id:int - новый ID роли
 
 student\_info\_delta:StudentInfoDelta - изменение доп информации студента
+
+new\_score:int - новый счет пользователя
 
 ## StudentInfoDelta
 
@@ -143,6 +147,8 @@ get\_all\_roles():RoleData\[] - получает все роли
 create\_user() - выполняет следующий API-запрос
 
 get\_user() - выполняет следующий API-запрос
+
+get\_all\_users() - выполняет следующий API-запрос
 
 update\_user() - выполняет следующий API-запрос
 

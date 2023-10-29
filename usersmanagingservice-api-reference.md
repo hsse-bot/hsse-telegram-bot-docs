@@ -88,6 +88,20 @@ ID пользователя в тг
 {% endswagger-response %}
 {% endswagger %}
 
+{% swagger method="get" path="/get-all-users" baseUrl="" summary="Получение всех пользователей" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Возвращает массив всех пользователей User" %}
+
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Что-то пошло не так..." %}
+
+{% endswagger-response %}
+{% endswagger %}
+
 {% swagger method="put" path="/update-user" baseUrl="" summary="Обновление информации о пользователе" %}
 {% swagger-description %}
 
@@ -189,4 +203,3 @@ ID роли
 
 {% endswagger-response %}
 {% endswagger %}
-
