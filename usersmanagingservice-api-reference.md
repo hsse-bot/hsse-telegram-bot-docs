@@ -15,7 +15,8 @@
     "studentInfo": {
         "roomNumber": 217,
         "isMale": true
-    }
+    },
+    "score": 312312
 }
 </code></pre>
 
@@ -112,6 +113,14 @@ ID в тг пользователя, которого меняют
 Объект изменения доп инфы о пользователе
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="newScore" type="int" %}
+Ставит новый счет пользователя (deltaScore = null)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="deltaScore" type="int" %}
+Изменяет счет пользователя на +deltaScore (newScore = null)
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Если успешно, возвращает измененный объект User" %}
 
 {% endswagger-response %}
@@ -180,3 +189,4 @@ ID роли
 
 {% endswagger-response %}
 {% endswagger %}
+
