@@ -70,6 +70,8 @@
 
 `room_number:int` - номер комнаты
 
+`is_male:bool` - true, если мужчина
+
 ## RoleData
 
 `id:int` - ID роли
