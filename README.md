@@ -64,6 +64,8 @@
 
 `student_info:Optional[StudentInfoData]` - объект дополнительной информации о студенте (если пользователь таковым является)
 
+`score:int` - рейтинг пользователя
+
 ## StudentInfoData
 
 `room_number:int` - номер комнаты
