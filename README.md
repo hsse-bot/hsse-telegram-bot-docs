@@ -96,7 +96,7 @@
 
 `is_male:boolean` - true, если мужчина
 
-## IUserRepository
+## BaseUserRepository
 
 Интерфейс предоставляет возможность манипулировать данными, которые связаны с пользователями
 
@@ -112,7 +112,7 @@
 
 ## MySqlUserRepository
 
-Имплементация IUserRepository, которая использует MySQL БД для работы с данными
+Имплементация BaseUserRepository, которая использует MySQL БД для работы с данными
 
 `create_user(user:UserData)` - создает пользователя
 
@@ -138,7 +138,7 @@
 
 `delete_user(tg_id:int)` - удаляет пользователя
 
-## IRolesRepository
+## BaseRolesRepository
 
 Интерфейс предоставляет возможность манипулировать данными, которые связаны с ролями
 
