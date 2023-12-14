@@ -203,3 +203,21 @@ ID роли
 
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="get" path="/get-role-by-name" baseUrl="" summary="Получение роли по имени" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="name" type="String" %}
+Имя роли
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Если успешно, возвращает объект Role" %}
+
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Что-то пошло не так" %}
+
+{% endswagger-response %}
+{% endswagger %}
