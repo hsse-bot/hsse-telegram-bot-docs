@@ -144,6 +144,12 @@ ID в тг пользователя, которого меняют
 {% endswagger-response %}
 {% endswagger %}
 
+{% swagger method="put" path="/update-role" baseUrl="" summary="Обновление роли" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+{% endswagger %}
+
 {% swagger method="delete" path="/delete-user" baseUrl="" summary="Удаление пользователя" %}
 {% swagger-description %}
 
