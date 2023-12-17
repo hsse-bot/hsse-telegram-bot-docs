@@ -148,6 +148,14 @@ ID в тг пользователя, которого меняют
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-parameter in="body" name="newName" type="String" %}
+Название роли
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="id" type="Int" %}
+ID роли
+{% endswagger-parameter %}
 {% endswagger %}
 
 {% swagger method="delete" path="/delete-user" baseUrl="" summary="Удаление пользователя" %}
