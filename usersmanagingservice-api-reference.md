@@ -235,3 +235,34 @@ ID роли
 
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="post" path="/ban-user" baseUrl="" summary="" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="tg_id" type="int" %}
+
+{% endswagger-parameter %}
+{% endswagger %}
+
+{% swagger method="get" path="/is-user-banned" baseUrl="" summary="" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="tg_id" type="int" %}
+
+{% endswagger-parameter %}
+{% endswagger %}
+
+{% swagger method="delete" path="/unban-user" baseUrl="" summary="" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="tg_id" type="int" %}
+
+{% endswagger-parameter %}
+{% endswagger %}
+
