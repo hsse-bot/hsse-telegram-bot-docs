@@ -17,7 +17,8 @@
         "isMale": true,
         "groupNumber": "Б13-301"
     },
-    "score": 312312
+    "score": 312312,
+    "email": "voitenko.da@phystech.edu"
 }
 </code></pre>
 
