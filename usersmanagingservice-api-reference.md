@@ -27,7 +27,8 @@
 ```json
 "studentInfoDelta": {
     "newRoomNumber": 217, // Изменение номера комнаты
-    "newIsMale": true // Изменение пола (-_-)
+    "newIsMale": true, // Изменение пола (-_-),
+    "newGroupNumber": "Б13-302" // Изменение группы
 }
 ```
 
