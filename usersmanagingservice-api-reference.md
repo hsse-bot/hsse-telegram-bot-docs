@@ -14,7 +14,8 @@
     },
     "studentInfo": {
         "roomNumber": 217,
-        "isMale": true
+        "isMale": true,
+        "groupNumber": "Б13-301"
     },
     "score": 312312
 }
